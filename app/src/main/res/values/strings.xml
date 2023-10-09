@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Login Screen</string>
+    <string name="user_or_email">E-mail ou usuário</string>
+    <string name="password">Senha</string>
+    <string name="button_login">Entrar</string>
+    <string name="create_account">Criar nova conta</string>
+    <string name="forgot_password">Esqueceu a senha?</string>
+</resources>
