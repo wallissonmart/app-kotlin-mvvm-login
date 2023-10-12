@@ -45,7 +45,7 @@ class LoginActivity : AppCompatActivity() {
                 is LoginResult.Success -> {
                     // Login bem-sucedido, vá para a próxima tela
                     val token = result.token
-                    println(token)
+                    // println(token)
                     // Faça o que for necessário com o token, como salvar em SharedPreferences
                     // e depois vá para a próxima tela
                     startActivity(Intent(this, HomeActivity::class.java))
