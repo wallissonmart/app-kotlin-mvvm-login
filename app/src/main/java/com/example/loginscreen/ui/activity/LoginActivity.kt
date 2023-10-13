@@ -49,7 +49,7 @@ class LoginActivity : AppCompatActivity() {
                     // Faça o que for necessário com o token, como salvar em SharedPreferences
                     // e depois vá para a próxima tela
                     startActivity(Intent(this, HomeActivity::class.java))
-                    // finish()
+                    finish()
                 }
 
                 is LoginResult.Error -> {
