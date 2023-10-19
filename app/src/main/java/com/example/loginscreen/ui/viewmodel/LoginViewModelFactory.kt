@@ -1,6 +1,7 @@
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.loginscreen.data.repository.UserRepository
+import com.example.loginscreen.data.repository.UserRepositoryImpl
 
 class LoginViewModelFactory(private val userRepository: UserRepository) :
     ViewModelProvider.Factory {

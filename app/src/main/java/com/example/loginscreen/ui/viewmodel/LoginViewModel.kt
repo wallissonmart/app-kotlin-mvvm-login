@@ -1,3 +1,4 @@
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -13,7 +14,9 @@ class LoginViewModel(private val userRepository: UserRepository) : ViewModel() {
     val loginButtonEnabledLiveData = MutableLiveData<Boolean>(true)
     val progressBarVisibleLiveData = MutableLiveData<Boolean>(false)
 
-    val loginResultLiveData = MutableLiveData<LoginResult>()
+    private val _loginResultLiveData = MutableLiveData<LoginResult>()
+    val loginResultLiveData: LiveData<LoginResult>
+    get() =  _loginResultLiveData
 
     fun login(username: String, password: String) {
         viewModelScope.launch {
@@ -26,19 +29,19 @@ class LoginViewModel(private val userRepository: UserRepository) : ViewModel() {
 
                 if (response.isSuccessful) {
                     val loginResponse = response.body()
+
                     if (loginResponse != null && loginResponse.token != null) {
                         // Login bem-sucedido
-                        loginResultLiveData.value = LoginResult.Success(loginResponse.token)
+                        _loginResultLiveData.value = LoginResult.Success(loginResponse.token)
                     }
                 } else if (response.code() === 401) {
                     // Resposta da API não foi bem-sucedida
                     val errorResponseBody = response.errorBody()?.string()
                     println(errorResponseBody)
-                    loginResultLiveData.value = LoginResult.Error("E-mail ou senha inválidos!")
                 }
             } catch (e: Exception) {
                 // Erro de conexão ou outro erro não tratado
-                loginResultLiveData.value = LoginResult.Error("Erro de conexão")
+                _loginResultLiveData.value = LoginResult.Error("Erro de conexão")
             } finally {
                 // Habilitar o botão de login novamente e ocultar o spinner de carregamento
                 loginButtonEnabledLiveData.value = true
