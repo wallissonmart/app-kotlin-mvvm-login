@@ -14,11 +14,11 @@ import androidx.appcompat.widget.AppCompatButton
 import androidx.appcompat.widget.AppCompatEditText
 import com.example.loginscreen.common.LoginResult
 import com.example.loginscreen.data.remote.network.RetrofitInstance
-import com.example.loginscreen.data.repository.UserRepository
+import com.example.loginscreen.data.repository.UserRepositoryImpl
 
 class LoginActivity : AppCompatActivity() {
     private val apiService = RetrofitInstance.create()
-    private val userRepository = UserRepository(apiService)
+    private val userRepository = UserRepositoryImpl(apiService)
     private val viewModel: LoginViewModel by viewModels {
         LoginViewModelFactory(userRepository)
     }
