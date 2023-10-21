@@ -16,7 +16,7 @@ fun <T> LiveData<T>.getOrAwaitValueTest(
     var data: T? = null
     val latch = CountDownLatch(1)
     val observer = object : Observer<T> {
-        override fun onChanged(vale: T) {
+        override fun onChanged(value: T) {
             data = value
             latch.countDown()
             this@getOrAwaitValueTest.removeObserver(this)
