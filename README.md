@@ -1,6 +1,6 @@
 # App Login
 
-App Login é um aplicativo Android desenvolvido para realiazar autenticação com usuários vindo da API.
+App Login é um aplicativo Android desenvolvido para realiazar autenticação com usuários vindos de uma API.
 
 ## Destaques
 
@@ -24,6 +24,7 @@ App Login é um aplicativo Android desenvolvido para realiazar autenticação co
 ## Uso
 
 Realizar Login:
+
 Preencha os campos com os dados usuário.
 Toque no botão "Entrar" para realizar autenticação e ir para a tela principal.
 
