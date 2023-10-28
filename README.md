@@ -6,9 +6,10 @@ App Login é um aplicativo Android desenvolvido para realiazar autenticação co
 
 - **Arquitetura MVVM**: O aplicativo adota a arquitetura Model-View-ViewModel (MVVM) para separar as preocupações de interface do usuário e lógica de negócios. Isso facilita a manutenção e escalabilidade do código.
 - **Model-View**:A aplicação segue o padrão Model-View, no qual o Model representa os dados e a lógica, a View é responsável pela apresentação e a ViewModel atua como um intermediário entre os dois.
-- **LiveData**:Utilizado para a criação de objetos LiveData que mantêm os dados atualizados e notificam as partes interessadas quando ocorrem alterações.
+- **LiveData**: Utilizado para a criação de objetos LiveData que mantêm os dados atualizados e notificam as partes interessadas quando ocorrem alterações.
 - **Consumo de API com Retrofit**: O aplicativo se comunica com uma API externa utilizando a biblioteca Retrofit, permitindo a recuperação de dados em tempo real.
 - **Autenticação**: O app implementa um sistema de autenticação, permitindo que os usuários façam login para acessar funcionalidades específicas.
+- **Testes Unitários**: Além disso, foram desenvolvidos testes unitários para garantir o bom funcionamento do aplicativo.
 
 ## Pré-requisitos
 
@@ -24,7 +25,6 @@ App Login é um aplicativo Android desenvolvido para realiazar autenticação co
 ## Uso
 
 Realizar Login:
-
 Preencha os campos com os dados usuário.
 Toque no botão "Entrar" para realizar autenticação e ir para a tela principal.
 
