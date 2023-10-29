@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Login Screen</string>
+    <string name="app_name">LoginScreen</string>
     <string name="user_or_email">E-mail ou usuário</string>
     <string name="password">Senha</string>
     <string name="button_login">Entrar</string>
